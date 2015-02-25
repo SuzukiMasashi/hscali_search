@@ -7,4 +7,21 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': true
     = csrf_meta_tags
   body
-    = yield
+    header.navbar.navbar-default role='navigation'
+      .container
+        .navbar-header
+          button.navbar-toggle data-target='#bs-example-navbar-collapse-1' type='button'
+            span.sr-only
+              | Toggle navigation
+            span.icon-bar
+              |
+            span.icon-bar
+              |
+            span.icon-bar
+              |
+          = link_to 'HscaliSearch', root_path, class: 'navbar-brand'
+        .collapse.navbar-collapse id='bs-example-navbar-collapse-1'
+          ul.nav.navbar-nav.navbar-right
+            li = link_to 'Githubでログイン', '/auth/github'
+    .container
+      = yield

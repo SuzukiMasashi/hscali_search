@@ -45,6 +45,8 @@ end
 
 ##
 
+gem 'rails-i18n'
+
 gem 'bootstrap-sass'
 gem 'slim-rails'
 

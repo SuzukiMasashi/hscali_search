@@ -60,4 +60,6 @@ group :development do
   gem 'pry-stack_explorer'
   gem 'hirb'
   gem 'hirb-unicode'
+  gem 'i18n_generators'
+  gem 'quiet_assets'
 end

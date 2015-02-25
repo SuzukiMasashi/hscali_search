@@ -1,0 +1,36 @@
+ja:
+  activerecord:
+    models:
+      card: card  #g
+      user: user  #g
+
+    attributes:
+      card:
+        artist: artist  #g
+        attack: attack  #g
+        card_type: card_type  #g
+        collectible: collectible  #g
+        cost: cost  #g
+        durability: durability  #g
+        elite: elite  #g
+        faction: faction  #g
+        flavor: flavor  #g
+        health: health  #g
+        how_to_get: how_to_get  #g
+        how_to_get_gold: how_to_get_gold  #g
+        in_play_text: in_play_text  #g
+        mechanics: mechanics  #g
+        name: name  #g
+        name_ja: name_ja  #g
+        player_class: player_class  #g
+        race: race  #g
+        rarity: rarity  #g
+        set: set  #g
+        text: text  #g
+        text_ja: text_ja  #g
+
+      user:
+        image_url: image_url  #g
+        nickname: nickname  #g
+        provider: provider  #g
+        uid: uid  #g

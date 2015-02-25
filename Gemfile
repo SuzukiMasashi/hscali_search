@@ -46,6 +46,7 @@ end
 ##
 
 gem 'bootstrap-sass'
+gem 'slim-rails'
 
 gem 'omniauth'
 gem 'omniauth-github'

@@ -50,3 +50,12 @@ gem 'slim-rails'
 
 gem 'omniauth'
 gem 'omniauth-github'
+
+group :development do
+  gem 'tapp'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
+  gem 'hirb'
+  gem 'hirb-unicode'
+end

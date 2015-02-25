@@ -24,4 +24,7 @@ html
           ul.nav.navbar-nav.navbar-right
             li = link_to 'Githubでログイン', '/auth/github'
     .container
+      - if flash[:notice]
+        .alert.alert-success
+          = flash[:notice]
       = yield

@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :nickname,  null: false
       t.string :image_url, null: false
 
-      t.timestamps
+      t.timestamps         null: false
     end
 
     add_index :users, %i(provider uid), unique: true

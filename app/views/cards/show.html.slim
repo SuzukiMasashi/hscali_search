@@ -1,0 +1,75 @@
+p#notice = notice
+
+p
+  strong Set:
+  = @card.set
+p
+  strong Hearthstone:
+  = @card.hearthstone_id
+p
+  strong Card type:
+  = @card.card_type
+p
+  strong Name:
+  = @card.name
+p
+  strong Name ja:
+  = @card.name_ja
+p
+  strong Text:
+  = @card.text
+p
+  strong Text ja:
+  = @card.text_ja
+p
+  strong Collectible:
+  = @card.collectible
+p
+  strong Player class:
+  = @card.player_class
+p
+  strong Cost:
+  = @card.cost
+p
+  strong Attack:
+  = @card.attack
+p
+  strong Health:
+  = @card.health
+p
+  strong Durability:
+  = @card.durability
+p
+  strong Mechanics:
+  = @card.mechanics
+p
+  strong Rarity:
+  = @card.rarity
+p
+  strong Faction:
+  = @card.faction
+p
+  strong Race:
+  = @card.race
+p
+  strong Elite:
+  = @card.elite
+p
+  strong How to get:
+  = @card.how_to_get
+p
+  strong How to get gold:
+  = @card.how_to_get_gold
+p
+  strong In play text:
+  = @card.in_play_text
+p
+  strong Flavor:
+  = @card.flavor
+p
+  strong Artist:
+  = @card.artist
+
+= link_to 'Edit', edit_card_path(@card)
+'|
+= link_to 'Back', cards_path

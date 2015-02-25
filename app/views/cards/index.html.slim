@@ -1,0 +1,65 @@
+h1 Listing cards
+
+table
+  thead
+    tr
+      th Set
+      th Hearthstone
+      th Card type
+      th Name
+      th Name ja
+      th Text
+      th Text ja
+      th Collectible
+      th Player class
+      th Cost
+      th Attack
+      th Health
+      th Durability
+      th Mechanics
+      th Rarity
+      th Faction
+      th Race
+      th Elite
+      th How to get
+      th How to get gold
+      th In play text
+      th Flavor
+      th Artist
+      th
+      th
+      th
+
+  tbody
+    - @cards.each do |card|
+      tr
+        td = card.set
+        td = card.hearthstone_id
+        td = card.card_type
+        td = card.name
+        td = card.name_ja
+        td = card.text
+        td = card.text_ja
+        td = card.collectible
+        td = card.player_class
+        td = card.cost
+        td = card.attack
+        td = card.health
+        td = card.durability
+        td = card.mechanics
+        td = card.rarity
+        td = card.faction
+        td = card.race
+        td = card.elite
+        td = card.how_to_get
+        td = card.how_to_get_gold
+        td = card.in_play_text
+        td = card.flavor
+        td = card.artist
+        td = link_to 'Show', card
+        td = link_to 'Edit', edit_card_path(card)
+        td = link_to 'Destroy', card, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Card', new_card_path

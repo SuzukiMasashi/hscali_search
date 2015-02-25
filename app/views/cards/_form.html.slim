@@ -1,0 +1,78 @@
+= form_for @card do |f|
+  - if @card.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@card.errors.count, "error")} prohibited this card from being saved:"
+      ul
+        - @card.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :set
+    = f.number_field :set
+  .field
+    = f.label :hearthstone_id
+    = f.text_field :hearthstone_id
+  .field
+    = f.label :card_type
+    = f.number_field :card_type
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :name_ja
+    = f.text_field :name_ja
+  .field
+    = f.label :text
+    = f.text_area :text
+  .field
+    = f.label :text_ja
+    = f.text_area :text_ja
+  .field
+    = f.label :collectible
+    = f.check_box :collectible
+  .field
+    = f.label :player_class
+    = f.number_field :player_class
+  .field
+    = f.label :cost
+    = f.number_field :cost
+  .field
+    = f.label :attack
+    = f.number_field :attack
+  .field
+    = f.label :health
+    = f.number_field :health
+  .field
+    = f.label :durability
+    = f.number_field :durability
+  .field
+    = f.label :mechanics
+    = f.text_area :mechanics
+  .field
+    = f.label :rarity
+    = f.number_field :rarity
+  .field
+    = f.label :faction
+    = f.number_field :faction
+  .field
+    = f.label :race
+    = f.number_field :race
+  .field
+    = f.label :elite
+    = f.check_box :elite
+  .field
+    = f.label :how_to_get
+    = f.text_area :how_to_get
+  .field
+    = f.label :how_to_get_gold
+    = f.text_area :how_to_get_gold
+  .field
+    = f.label :in_play_text
+    = f.text_area :in_play_text
+  .field
+    = f.label :flavor
+    = f.text_area :flavor
+  .field
+    = f.label :artist
+    = f.text_field :artist
+  .actions = f.submit

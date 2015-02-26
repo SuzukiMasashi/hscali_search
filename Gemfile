@@ -54,7 +54,9 @@ gem 'omniauth'
 gem 'omniauth-github'
 
 group :development do
+  gem 'awesome_print'
   gem 'tapp'
+  gem 'pry-doc'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'

@@ -4,7 +4,9 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
-    @cards = Card.all
+    @search       = Card.ransack(params[:q])
+    @search.sorts = 'name asc'
+    @cards        = @search.result.page(1).per(5)
   end
 
   # GET /cards/1

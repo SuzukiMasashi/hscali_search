@@ -1,24 +1,20 @@
 doctype html
 html
   head
-    title
-      | HscaliSearch
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true
-    = javascript_include_tag 'application', 'data-turbolinks-track': true
+    title HscaliSearch
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
     header.navbar.navbar-default role='navigation'
       .container
         .navbar-header
           button.navbar-toggle data-target='#bs-example-navbar-collapse-1' type='button'
-            span.sr-only
-              | Toggle navigation
+            span.sr-only Toggle navigation
             span.icon-bar
-              |
             span.icon-bar
-              |
             span.icon-bar
-              |
           = link_to 'HscaliSearch', root_path, class: 'navbar-brand'
         .collapse.navbar-collapse id='bs-example-navbar-collapse-1'
           ul.nav.navbar-nav.navbar-right

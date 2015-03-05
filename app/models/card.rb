@@ -1,5 +1,5 @@
 class Card < ActiveRecord::Base
-  IMAGE_URL = 'http://wow.zamimg.com/images/hearthstone/cards/enus/small'
+  IMAGE_URL = 'http://wow.zamimg.com/images/hearthstone/cards/enus/medium'
 
   class << self
     def ransackable_attributes(auth_object = nil)

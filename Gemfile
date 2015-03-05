@@ -58,6 +58,8 @@ gem 'omniauth-github'
 gem 'ransack'
 gem 'kaminari'
 
+gem 'puma'
+
 group :development do
   gem 'awesome_print'
   gem 'tapp'

@@ -45,6 +45,8 @@ end
 
 ##
 
+gem 'seed-fu'
+
 gem 'rails-i18n'
 
 gem 'bootstrap-sass'

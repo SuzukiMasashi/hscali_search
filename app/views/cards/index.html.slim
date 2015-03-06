@@ -1,7 +1,17 @@
 = search_form_for @search do |f|
   .form-group
     = f.label      :name_cont, 'カード名'
-    = f.text_field :name_cont, class: 'form-control'
+    = f.text_field :name_cont, class: 'form-control', placeholder: 'Card Name'
+  .form-group
+    = f.label      :player_class_in, 'クラス'
+    .clearfix
+    - Card.player_classes.each do |player_class, value|
+      label.checkbox-inline
+        = check_box_tag 'q[player_class_in][]', value, false, id: "q_player_class_in_#{value}"
+        = player_class
+    label.checkbox-inline
+      = check_box_tag 'q[player_class_in][]', 0, true, id: "q_player_class_in_0"
+      = 'Neutral'
 
 - @cards.each do |card|
   .row

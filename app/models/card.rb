@@ -5,7 +5,7 @@ class Card < ActiveRecord::Base
 
   class << self
     def ransackable_attributes(auth_object = nil)
-      %w(name)
+      %w(name player_class)
     end
   end
 

@@ -15,7 +15,7 @@ class Card < ActiveRecord::Base
   enum card_type: {
     Minion: 1,
     Spell:  2,
-    Weapo:  3,
+    Weapon:  3,
     Hero:   4,
   }
 

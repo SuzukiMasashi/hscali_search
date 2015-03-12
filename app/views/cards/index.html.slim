@@ -3,12 +3,44 @@
     = f.label      :name_cont, 'カード名'
     = f.text_field :name_cont, class: 'form-control', placeholder: 'Card Name'
   .form-group
+    = f.label      :card_type_in, 'カードタイプ'
+    .clearfix
+    - Card.card_types.each do |card_type, value|
+      label.checkbox-inline
+        = f.check_box(:card_type_in, {multiple: true}, value, nil)
+        = card_type
+    end
+  .form-group
+    = f.label      :race_in, '種族'
+    .clearfix
+    - Card.races.each do |race, value|
+      label.checkbox-inline
+        = f.check_box(:race_in, {multiple: true}, value, nil)
+        = race
+    end
+  .form-group
+    = f.label      :rarity_in, 'レアリティ'
+    .clearfix
+    - Card.rarities.each do |rarity, value|
+      label.checkbox-inline
+        = f.check_box(:rarity_in, {multiple: true}, value, nil)
+        = rarity
+    end
+  .form-group
     = f.label      :player_class_in, 'クラス'
     .clearfix
     - Card.player_classes.each do |player_class, value|
       label.checkbox-inline
         = f.check_box(:player_class_in, {multiple: true}, value, nil)
         = player_class
+    end
+  .form-group
+    = f.label      :set_in, 'カードセット'
+    .clearfix
+    - Card.sets.each do |set, value|
+      label.checkbox-inline
+        = f.check_box(:set_in, {multiple: true}, value, nil)
+        = set
     end
 
 - @cards.each do |card|

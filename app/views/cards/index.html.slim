@@ -43,6 +43,8 @@
         = set
     end
 
+= paginate @cards
+
 - @cards.each do |card|
   .row
     .col-xs-6
@@ -52,3 +54,5 @@
         p.panel-body== card.text_ja
     .col-xs-6
       .thumbnail= image_tag card.image
+
+= paginate @cards

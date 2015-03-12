@@ -1,7 +1,7 @@
 module CardEnum
- extend ActiveSupport::Concern
+  extend ActiveSupport::Concern
 
- included do
+  included do
     enum set: {
       Basic:                1,
       Classic:              2,
@@ -23,6 +23,7 @@ module CardEnum
     }
 
     enum player_class: {
+      Neutral: 0, # undefined on AllSets.json
       Druid:   1,
       Hunter:  2,
       Mage:    3,
@@ -53,9 +54,9 @@ module CardEnum
     }
 
     enum faction: {
-      Neutral:  1,
+      Other:    1,  # Neutral on AllSets.json
       Alliance: 2,
       Horde:    3,
     }
- end
+  end
 end

@@ -1,3 +1,4 @@
+= provide(:title, Card.model_name.human.pluralize)
 = search_form_for @search do |f|
   .form-group
     = f.label      :name_cont, 'カード名'

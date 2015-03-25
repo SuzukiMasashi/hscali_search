@@ -6,7 +6,7 @@ class CardsController < ApplicationController
   def index
     @search       = Card.ransack(params[:q])
     @search.sorts = 'name asc'
-    @cards        = @search.result.page(params[:page]).per(10)
+    @cards        = @search.result.page(params[:page])
   end
 
   # GET /cards/1

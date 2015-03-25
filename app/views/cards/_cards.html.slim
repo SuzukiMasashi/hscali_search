@@ -1,0 +1,13 @@
+= paginate @cards
+
+- @cards.each do |card|
+  .row
+    .col-xs-6
+      .panel.panel-primary
+        p.panel-heading= card.name
+        p.panel-body== card.text
+        p.panel-body== card.text_ja
+    .col-xs-6
+      .thumbnail= image_tag card.image
+
+= paginate @cards

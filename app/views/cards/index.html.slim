@@ -1,5 +1,5 @@
 = provide(:title, Card.model_name.human.pluralize)
-= search_form_for @search do |f|
+= search_form_for @search, remote: true do |f|
   .form-group
     = f.label      :name_cont, 'カード名'
     = f.text_field :name_cont, class: 'form-control', placeholder: 'Card Name'
@@ -44,16 +44,4 @@
         = set
     end
 
-= paginate @cards
-
-- @cards.each do |card|
-  .row
-    .col-xs-6
-      .panel.panel-primary
-        p.panel-heading= card.name
-        p.panel-body== card.text
-        p.panel-body== card.text_ja
-    .col-xs-6
-      .thumbnail= image_tag card.image
-
-= paginate @cards
+#cards= render partial: 'cards'
